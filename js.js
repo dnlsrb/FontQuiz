@@ -27,11 +27,10 @@ function fontCheck(){
         'phagspa', 'phagspab', 'PLAYBILL', 'POORICH', 'PRISTINA', 'RAGE', 'RAVIE', 'REFSAN', 'REFSPCL', 'ROCCB___', 'ROCC____', 'ROCK', 'ROCKB', 
         'ROCKBI', 'ROCKEB', 'ROCKI',  'SCHLBKB', 'SCHLBKBI', 'SCHLBKI',  'SCRIPTBL', 'segmdl2', 'segoepr', 'segoeprb', 'segoesc', 
         'segoescb', 'segoeui', 'segoeuib', 'segoeuii', 'segoeuil', 'segoeuisl', 'segoeuiz', 'seguibl', 'seguibli', 'seguiemj', 'seguihis', 'seguili',
-        'seguisb', 'seguisbi', 'seguisli', 'seguisym',    'SHOWG', 'simsun', 'simsunb', 'Sitka', 'SitkaB', 'SitkaI', 'SitkaZ',
-        'SNAP____', 'STENCIL', 'sylfaen', 'symbol', 'tahoma', 'tahomabd', 'taile', 'taileb', 'TCBI____', 'TCB_____',
+        'seguisb', 'seguisbi', 'seguisli', 'seguisym',    'SHOWG',    'SNAP____', 'STENCIL', 'sylfaen', 'symbol', 'tahoma', 'tahomabd', 'taile', 'taileb', 'TCBI____', 'TCB_____',
         'TCCB____', 'TCCEB', 'TCCM____', 'TCMI____', 'TCM_____', 'TEMPSITC', 'times', 'timesbd', 'timesbi', 'timesi', 'trebuc', 'trebucbd', 
         'trebucbi', 'trebucit', 'verdana', 'verdanab', 'verdanai', 'verdanaz',   'VINERITC', 'VIVALDII', 'VLADIMIR',
-        'webdings', 'wingding', 'WINGDNG2', 'WINGDNG3', 'YuGothB', 'YuGothL', 'YuGothM', 'YuGothR'
+        'webdings', 'wingding', 'WINGDNG2', 'WINGDNG3',
 
           ].sort());
           (async() => {
@@ -65,6 +64,7 @@ function getThreeFont(font){
     
    
     console.log('getting 3 font checking end');
+ 
     getQuizFont(getFont, font, false);
     changeFont(btn1, font[getFont[0]], true);
     changeFont(btn2, font[getFont[1]], true);
@@ -184,7 +184,34 @@ async function RestartButton(buttonId){
        
   
 }
+// function loadFontFile(fileName) {
+//     if (document.getElementById(fileName)) return; // Avoid loading if already present
 
+//     const link = document.createElement('style');
+//     link.id = fileName;
+//     link.innerHTML = "@font-face {font-family: "+ fileName +"; src: url("+ fileName +");}";
+//     link.href = fileName;
+
+//     document.head.appendChild(link);
+//     }
+
+
+
+// Function to load a CSS file dynamically
+// function loadFontFile(fileName) {
+//     if (document.querySelector(`link[href="${fileName}"]`)) return; // Avoid loading if already present
+
+//     const link = document.createElement('link');
+//     link.rel = 'stylesheet';
+//     link.href = fileName;
+
+//     document.head.appendChild(link);
+// }
+
+// // Example usage: Load fonts1.css when a specific section or quiz is active
+// document.querySelector('#startQuizButton').addEventListener('click', function() {
+//     loadFontFile('fonts/fonts1.css'); // Load the first batch of fonts
+// });
 function disableButton(Con){
     console.log('disabling buttons started');
     const buttons = document.getElementsByTagName("button");
@@ -199,6 +226,10 @@ function disableButton(Con){
       }
     }
 }
+// Function to load a CSS file dynamically
+ 
+
+ 
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
