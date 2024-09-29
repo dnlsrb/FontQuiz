@@ -68,11 +68,6 @@ function getThreeFont(font){
     loadFont(font[getFont[0]]);
     loadFont(font[getFont[1]]);
     loadFont(font[getFont[2]]);
-    
- 
-        loadFont(font[getFont[0]]);
-        loadFont(font[getFont[1]]);
-        loadFont(font[getFont[2]]);
         if (document.readyState == "complete") {
  
     getQuizFont(getFont, font, false);
