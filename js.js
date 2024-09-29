@@ -4,14 +4,14 @@ function fontCheck(){
      
         const fontCheck = new Set([
         // Windows 10
-        'AGENCYB', 'AGENCYR', 'ALGER', 'ANTQUAB', 'ANTQUABI', 'ANTQUAI', 'app866', 'arial', 'arialbd', 'arialbi', 'ariali', 'ARIALN', 'ARIALNB', 
+        'AGENCYB', 'AGENCYR', 'ALGER', 'ANTQUAB', 'ANTQUABI', 'ANTQUAI',   'arial', 'arialbd', 'arialbi', 'ariali', 'ARIALN', 'ARIALNB', 
         'ARIALNBI', 'ARIALNI', 'ariblk', 'ARLRDBD', 'bahnschrift', 'BASKVILL', 'BAUHS93', 'BELL', 'BELLB', 'BELLI', 'BERNHC', 'BKANT', 'BOD_B',
         'BOD_BI', 'BOD_BLAI', 'BOD_BLAR', 'BOD_CB', 'BOD_CBI', 'BOD_CI', 'BOD_CR', 'BOD_I', 'BOD_PSTC', 'BOD_R', 'BOOKOS', 'BOOKOSB', 'BOOKOSBI', 
         'BOOKOSI', 'BRADHITC', 'BRITANIC', 'BRLNSB', 'BRLNSDB', 'BRLNSR', 'BROADW', 'BRUSHSCI', 'BSSYM7', 'calibri', 'calibrib', 'calibrii', 'calibril', 
         'calibrili', 'calibriz', 'CALIFB', 'CALIFI', 'CALIFR', 'CALIST', 'CALISTB', 'CALISTBI', 'CALISTI', 'cambria', 'cambriab', 'cambriai', 'cambriaz',
         'Candara', 'Candarab', 'Candarai', 'Candaral', 'Candarali', 'Candaraz', 'CASTELAR', 'CENSCBK', 'CENTAUR', 'CENTURY', 'CHILLER', 'COLONNA', 'comic',
         'comicbd', 'comici', 'comicz', 'consola', 'consolab', 'consolai', 'consolaz', 'constan', 'constanb', 'constani', 'constanz', 'COOPBL', 'COPRGTB', 
-        'COPRGTL', 'corbel', 'corbelb', 'corbeli', 'corbell', 'corbelli', 'corbelz', 'cour', 'courbd', 'courbi', 'courer', 'couri', 'CURLZ___', 'DUBAI-BOLD',
+        'COPRGTL', 'corbel', 'corbelb', 'corbeli', 'corbell', 'corbelli', 'corbelz', 'cour', 'courbd', 'courbi',  'couri', 'CURLZ___', 'DUBAI-BOLD',
         'DUBAI-LIGHT', 'DUBAI-MEDIUM', 'DUBAI-REGULAR', 'ebrima', 'ebrimabd', 'ELEPHNT', 'ELEPHNTI', 'ENGR', 'ERASBD', 'ERASDEMI', 'ERASLGHT', 'ERASMD',
         'FELIXTI', 'filelist', 'FORTE', 'FRABK', 'FRABKIT', 'FRADM', 'FRADMCN', 'FRADMIT', 'FRAHV', 'FRAHVIT', 'framd', 'FRAMDCN', 'framdit', 'FREESCPT', 
         'FRSCRIPT', 'FTLTLT', 'Gabriola', 'gadugi', 'gadugib', 'GARA', 'GARABD', 'GARAIT', 'georgia', 'georgiab', 'georgiai', 'georgiaz', 'GIGI', 
@@ -21,27 +21,27 @@ function fontCheck(){
         'KUNSTLER', 'LATINWD', 'LBRITE', 'LBRITED', 'LBRITEDI', 'LBRITEI', 'LCALLIG', 'LeelaUIb', 'LEELAWAD', 'LEELAWDB', 'LeelawUI', 'LeelUIsl',
         'LFAX', 'LFAXD', 'LFAXDI', 'LFAXI', 'LHANDW', 'LSANS', 'LSANSD', 'LSANSDI', 'LSANSI', 'LTYPE', 'LTYPEB', 'LTYPEBO', 'LTYPEO', 'lucon', 
         'l_10646', 'MAGNETOB', 'MAIAN', 'malgun', 'malgunbd', 'malgunsl', 'MATURASC', 'micross', 'mingliub', 'MISTRAL', 'mmrtext', 'mmrtextb', 
-        'MOD20', 'modern', 'monbaiti', 'msgothic', 'msjh', 'msjhbd', 'msjhl', 'MSUIGHUB', 'MSUIGHUR', 'msyh', 'msyhbd', 'msyhl', 'msyi', 'MTCORSVA',
+        'MOD20',  'monbaiti', 'msgothic', 'msjh', 'msjhbd', 'msjhl', 'MSUIGHUB', 'MSUIGHUR', 'msyh', 'msyhbd', 'msyhl', 'msyi', 'MTCORSVA',
         'MTEXTRA', 'mvboli', 'NIAGENG', 'NIAGSOL', 'Nirmala', 'NirmalaB', 'NirmalaS', 'ntailu', 'ntailub', 'OCRAEXT', 'OLDENGL', 'ONYX', 'OUTLOOK', 
         'pala', 'palab', 'palabi', 'palai', 'PALSCRI', 'PAPYRUS', 'PARCHM', 'PERBI___', 'PERB____', 'PERI____', 'PERTIBD', 'PERTILI', 'PER_____',
         'phagspa', 'phagspab', 'PLAYBILL', 'POORICH', 'PRISTINA', 'RAGE', 'RAVIE', 'REFSAN', 'REFSPCL', 'ROCCB___', 'ROCC____', 'ROCK', 'ROCKB', 
-        'ROCKBI', 'ROCKEB', 'ROCKI', 'roman', 'SCHLBKB', 'SCHLBKBI', 'SCHLBKI', 'script', 'SCRIPTBL', 'segmdl2', 'segoepr', 'segoeprb', 'segoesc', 
+        'ROCKBI', 'ROCKEB', 'ROCKI',  'SCHLBKB', 'SCHLBKBI', 'SCHLBKI',  'SCRIPTBL', 'segmdl2', 'segoepr', 'segoeprb', 'segoesc', 
         'segoescb', 'segoeui', 'segoeuib', 'segoeuii', 'segoeuil', 'segoeuisl', 'segoeuiz', 'seguibl', 'seguibli', 'seguiemj', 'seguihis', 'seguili',
-        'seguisb', 'seguisbi', 'seguisli', 'seguisym', 'serifer', 'seriffr', 'SHOWG', 'simsun', 'simsunb', 'Sitka', 'SitkaB', 'SitkaI', 'SitkaZ',
-        'smaller', 'SNAP____', 'sserifer', 'STENCIL', 'sylfaen', 'symbol', 'tahoma', 'tahomabd', 'taile', 'taileb', 'TCBI____', 'TCB_____',
+        'seguisb', 'seguisbi', 'seguisli', 'seguisym',    'SHOWG', 'simsun', 'simsunb', 'Sitka', 'SitkaB', 'SitkaI', 'SitkaZ',
+        'SNAP____', 'STENCIL', 'sylfaen', 'symbol', 'tahoma', 'tahomabd', 'taile', 'taileb', 'TCBI____', 'TCB_____',
         'TCCB____', 'TCCEB', 'TCCM____', 'TCMI____', 'TCM_____', 'TEMPSITC', 'times', 'timesbd', 'timesbi', 'timesi', 'trebuc', 'trebucbd', 
-        'trebucbi', 'trebucit', 'verdana', 'verdanab', 'verdanai', 'verdanaz', 'vga866', 'vgafixr', 'vgasysr', 'VINERITC', 'VIVALDII', 'VLADIMIR',
+        'trebucbi', 'trebucit', 'verdana', 'verdanab', 'verdanai', 'verdanaz',   'VINERITC', 'VIVALDII', 'VLADIMIR',
         'webdings', 'wingding', 'WINGDNG2', 'WINGDNG3', 'YuGothB', 'YuGothL', 'YuGothM', 'YuGothR'
 
           ].sort());
           (async() => {
-            await document.fonts.ready;
+            
             const addFont = [];
     
             for (const font of fontCheck.values()) {
-              if (document.fonts.check(`12px "${font}"`)) {
+              
                 addFont.push(font);
-              }
+               
             }
             getThreeFont(addFont);
           })();
@@ -51,9 +51,10 @@ function fontCheck(){
 
 function getThreeFont(font){
     console.log('getting 3 font checking started');
-
+    console.log("Font Length: " + font.length);
+ 
     const getFont = [];
-    
+ 
     for(let i = 0; i < 3; i++) { 
      let genNumber = Math.floor(Math.random() * font.length);
     
@@ -72,6 +73,7 @@ function getThreeFont(font){
 }
 function isNumberExist(number, font){
     if(font.includes(number)){
+        
         console.log(number + " already exist Changing....");
         let genNumber = Math.floor(Math.random() * font.length);
         return isNumberExist(genNumber, font)

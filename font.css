@@ -471,10 +471,6 @@
     src: url('fonts/FELIXTI.TTF');
   }
   @font-face {
-    font-family: 'filelist';
-    src: url('fonts/filelist.txt');
-  }
-  @font-face {
     font-family: 'FORTE';
     src: url('fonts/FORTE.TTF');
   }
