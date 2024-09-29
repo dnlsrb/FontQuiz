@@ -9,28 +9,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="flex flex-col justify-center items-center h-screen w-full">
+    <div   class="flex flex-col justify-center items-center h-screen w-full dark:bg-gray-700">
     <div class="flex mb-10">
     <input type="text" oninput="testText()" id="inputText" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm   focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Test here" required>
     <button type="button" onclick="resetText()" id="resetText" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm       block   p-2.5 dark:focus:ring-gray-700  hover:bg-gray-100">Reset</button>
     </div>
-    <h3 class="text-9xl mb-20" id="text"  >Aa</h3>
-    <h1 class="text-sm">Score: <span id="score">0</span></h1>
+    <h3 class="text-9xl mb-20 dark:text-white" id="text"  >Aa</h3>
+    <h1 class="text-sm dark:text-white">Score: <span id="score">0</span></h1>
 
     <input type="hidden" id="hiddenValue"  >
-    <div class=" mt-5 p-3 text-center">
-        <button id="btn1" onClick="isRight(this.id)" type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium text-lg px-16 py-10   dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-            Light
+    <div class=" mt-5 p-3 text-center flex flex-col sm:flex-row">
+        <button id="btn1" onClick="isRight(this.id)" type="button" name="buttonAll" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium text-lg px-16 py-10   dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700  dark:focus:ring-gray-700">
+            NULL
         </button>
 
-        <button id="btn2" onClick="isRight(this.id)" type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium text-lg px-16 py-10   dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-            Light
+        <button id="btn2" onClick="isRight(this.id)" type="button"  name="buttonAll" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium text-lg px-16 py-10   dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700  dark:focus:ring-gray-700">
+            NULL
         </button>
 
-        <button id="btn3" onClick="isRight(this.id)" type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium text-lg px-16 py-10   dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-            Light
+        <button id="btn3" onClick="isRight(this.id)" type="button" name="buttonAll" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium text-lg px-16 py-10   dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700  dark:focus:ring-gray-700">
+            NULL
         </button>
     </div>
+    <span class="dark:text-white">only available in chrome and windows</span>
     </div>
 
     <Script src="js.js"></Script>

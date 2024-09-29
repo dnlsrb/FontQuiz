@@ -80,6 +80,7 @@ fontCheck();
 
 function isRight(buttonId){
     console.log(buttonId);
+     
     let buttonValue = document.getElementById(buttonId).innerText;
     console.log(buttonValue + " " + hiddenValue.value)
     if(buttonValue == hiddenValue.value){
@@ -89,20 +90,47 @@ function isRight(buttonId){
         let Minus = parseInt(score.innerHTML)- 1;
         score.innerHTML = Minus;
     }
-
+    showCorrect(buttonId)
+ 
     gameStart()
 }
 
 
 function testText(){
     let changeText = document.getElementById("inputText").value;
+    if(changeText == ""){
+        text.innerHTML = "Aa";
+    } else { 
     text.innerHTML = changeText;
+    }
 }
 
 function resetText(){
     text.innerHTML = "Aa";
     inputText.value = "";
 }
+
+ function showCorrect(buttonId){
+    
+    let buttonValue = document.getElementById(buttonId).innerText;
+     
+ 
+     if(buttonValue == hiddenValue.value){
+        console.log(buttonId);
+        document.getElementById(buttonId).style.backgroundColor = "green";
+         
+    }else{
+        document.getElementById(buttonId).style.backgroundColor = "red";
+        
+    }
+    setTimeout(function() {
+        document.getElementById(buttonId).style.backgroundColor = "";
+        }, 1000);
+}
+
+ 
+
+ 
 
 
 gameStart();
