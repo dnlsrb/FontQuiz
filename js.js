@@ -195,7 +195,9 @@ function loadFont(fontName) {
     style.innerHTML = `
         @font-face {
             font-family: '${fontName}';
-            src: url('fonts/${fontName}.TTF') format('truetype');
+            src: 
+            url('fonts/${fontName}.TTF') format('truetype'),
+            url('fonts/${fontName}.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
