@@ -74,11 +74,6 @@ function getThreeFont(font){
     changeFont(btn1, font[getFont[0]], true);
     changeFont(btn2, font[getFont[1]], true);
     changeFont(btn3, font[getFont[2]], true);
-        }else{
-            getQuizFont(getFont, font, false);
-            changeFont(btn1, font[getFont[0]], true);
-            changeFont(btn2, font[getFont[1]], true);
-            changeFont(btn3, font[getFont[2]], true);
         }
 }
 function isNumberExist(number, font){
