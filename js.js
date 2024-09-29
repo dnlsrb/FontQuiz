@@ -63,7 +63,7 @@ function changeFont(element, font, changeText) {
     element.style.fontFamily = font;
     if(changeText == true){ 
     element.innerHTML = font;
-     
+    element.name = font;
     }else{
         console.log('eh');
         hiddenValue.setAttribute('value', font);
@@ -91,8 +91,8 @@ function isRight(buttonId){
         score.innerHTML = Minus;
     }
     showCorrect(buttonId)
+    Restart();
  
-    gameStart()
 }
 
 
@@ -109,26 +109,70 @@ function resetText(){
     text.innerHTML = "Aa";
     inputText.value = "";
 }
+async function Restart(){
+    for (let i = 0; i < 3; i++) {
+        console.log(`Waiting ${i} seconds...`);
+        await sleep(i * 1000);
+}
+    console.log('Done');
+    gameStart()
+}
+
+
+async function RestartButton(buttonId){
+
+    for (let i = 0; i < 3; i++) {
+        await sleep(i * 1000);
+}
+    console.log('Done');
+    disableButton(false)
+    document.getElementById(buttonId).style.backgroundColor = "";
+}
 
  function showCorrect(buttonId){
     
     let buttonValue = document.getElementById(buttonId).innerText;
-     
- 
+    const buttons = document.getElementsByTagName("button");
+    console.log("button name " + buttons[1].name);
+    disableButton(true)
      if(buttonValue == hiddenValue.value){
         console.log(buttonId);
         document.getElementById(buttonId).style.backgroundColor = "green";
-         
+        
     }else{
         document.getElementById(buttonId).style.backgroundColor = "red";
-        
+        for(let i = 0; i < buttons.length; i++) {
+            console.log(buttons[i].name + " is  match? "+ hiddenValue.value);
+        if(buttons[i].name == hiddenValue.value){
+            console.log("Button Name " + buttons[i].name);
+            document.getElementById(buttons[i].id).style.backgroundColor = "green";
+            RestartButton(buttons[i].id);
+        }
+        }
     }
-    setTimeout(function() {
-        document.getElementById(buttonId).style.backgroundColor = "";
-        }, 1000);
+    RestartButton(buttonId);
+       
+  
 }
 
- 
+function disableButton(Con){
+    console.log('disabling buttons started');
+    const buttons = document.getElementsByTagName("button");
+    if(Con == true){ 
+    for (const button of buttons) {
+    button.disabled = true;
+    }
+    }else{
+     for (const button of buttons) {
+        
+     button.disabled = false;
+      }
+    }
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
  
 
