@@ -138,7 +138,7 @@ function resetText(){
     inputText.value = "";
 }
 async function Restart(){
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
         console.log(`Waiting ${i} seconds...`);
         await sleep(i * 1000);
 }
@@ -149,7 +149,7 @@ async function Restart(){
 
 async function RestartButton(buttonId){
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
         await sleep(i * 1000);
 }
     console.log('Done');
