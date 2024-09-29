@@ -109,6 +109,7 @@ function changeFont(element, font, changeText) {
     if(changeText == true){ 
     element.innerHTML = font;
     element.name = font;
+    element.title = font;
     }else{
         console.log('eh');
         hiddenValue.setAttribute('value', font);
