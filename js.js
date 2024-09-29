@@ -4,7 +4,35 @@ function fontCheck(){
      
         const fontCheck = new Set([
         // Windows 10
-          'Arial', 'Arial Black', 'Bahnschrift', 'Calibri', 'Cambria', 'Cambria Math', 'Candara', 'Comic Sans MS', 'Consolas', 'Constantia', 'Corbel', 'Courier New', 'Ebrima', 'Franklin Gothic Medium', 'Gabriola', 'Gadugi', 'Georgia', 'HoloLens MDL2 Assets', 'Impact', 'Ink Free', 'Javanese Text', 'Leelawadee UI', 'Lucida Console', 'Lucida Sans Unicode', 'Malgun Gothic', 'Marlett', 'Microsoft Himalaya', 'Microsoft JhengHei', 'Microsoft New Tai Lue', 'Microsoft PhagsPa', 'Microsoft Sans Serif', 'Microsoft Tai Le', 'Microsoft YaHei', 'Microsoft Yi Baiti', 'MingLiU-ExtB', 'Mongolian Baiti', 'MS Gothic', 'MV Boli', 'Myanmar Text', 'Nirmala UI', 'Palatino Linotype', 'Segoe MDL2 Assets', 'Segoe Print', 'Segoe Script', 'Segoe UI', 'Segoe UI Historic', 'Segoe UI Emoji', 'Segoe UI Symbol', 'SimSun', 'Sitka', 'Sylfaen', 'Symbol', 'Tahoma', 'Times New Roman', 'Trebuchet MS', 'Verdana', 'Webdings', 'Wingdings', 'Yu Gothic',
+        'AGENCYB', 'AGENCYR', 'ALGER', 'ANTQUAB', 'ANTQUABI', 'ANTQUAI', 'app866', 'arial', 'arialbd', 'arialbi', 'ariali', 'ARIALN', 'ARIALNB', 
+        'ARIALNBI', 'ARIALNI', 'ariblk', 'ARLRDBD', 'bahnschrift', 'BASKVILL', 'BAUHS93', 'BELL', 'BELLB', 'BELLI', 'BERNHC', 'BKANT', 'BOD_B',
+        'BOD_BI', 'BOD_BLAI', 'BOD_BLAR', 'BOD_CB', 'BOD_CBI', 'BOD_CI', 'BOD_CR', 'BOD_I', 'BOD_PSTC', 'BOD_R', 'BOOKOS', 'BOOKOSB', 'BOOKOSBI', 
+        'BOOKOSI', 'BRADHITC', 'BRITANIC', 'BRLNSB', 'BRLNSDB', 'BRLNSR', 'BROADW', 'BRUSHSCI', 'BSSYM7', 'calibri', 'calibrib', 'calibrii', 'calibril', 
+        'calibrili', 'calibriz', 'CALIFB', 'CALIFI', 'CALIFR', 'CALIST', 'CALISTB', 'CALISTBI', 'CALISTI', 'cambria', 'cambriab', 'cambriai', 'cambriaz',
+        'Candara', 'Candarab', 'Candarai', 'Candaral', 'Candarali', 'Candaraz', 'CASTELAR', 'CENSCBK', 'CENTAUR', 'CENTURY', 'CHILLER', 'COLONNA', 'comic',
+        'comicbd', 'comici', 'comicz', 'consola', 'consolab', 'consolai', 'consolaz', 'constan', 'constanb', 'constani', 'constanz', 'COOPBL', 'COPRGTB', 
+        'COPRGTL', 'corbel', 'corbelb', 'corbeli', 'corbell', 'corbelli', 'corbelz', 'cour', 'courbd', 'courbi', 'courer', 'couri', 'CURLZ___', 'DUBAI-BOLD',
+        'DUBAI-LIGHT', 'DUBAI-MEDIUM', 'DUBAI-REGULAR', 'ebrima', 'ebrimabd', 'ELEPHNT', 'ELEPHNTI', 'ENGR', 'ERASBD', 'ERASDEMI', 'ERASLGHT', 'ERASMD',
+        'FELIXTI', 'filelist', 'FORTE', 'FRABK', 'FRABKIT', 'FRADM', 'FRADMCN', 'FRADMIT', 'FRAHV', 'FRAHVIT', 'framd', 'FRAMDCN', 'framdit', 'FREESCPT', 
+        'FRSCRIPT', 'FTLTLT', 'Gabriola', 'gadugi', 'gadugib', 'GARA', 'GARABD', 'GARAIT', 'georgia', 'georgiab', 'georgiai', 'georgiaz', 'GIGI', 
+        'GILBI___', 'GILB____', 'GILC____', 'GILI____', 'GILLUBCD', 'GILSANUB', 'GIL_____', 'GLECB', 'GlitchGoblin-2O87v', 'GLSNECB', 'GOTHIC',
+        'GOTHICB', 'GOTHICBI', 'GOTHICI', 'GOUDOS', 'GOUDOSB', 'GOUDOSI', 'GOUDYSTO', 'HARLOWSI', 'HARNGTON', 'HATTEN', 'himalaya', 'holomdl2', 
+        'HTOWERT', 'HTOWERTI', 'impact', 'IMPRISHA', 'INFROMAN', 'Inkfree', 'ITCBLKAD', 'ITCEDSCR', 'ITCKRIST', 'javatext', 'JOKERMAN', 'JUICE___',
+        'KUNSTLER', 'LATINWD', 'LBRITE', 'LBRITED', 'LBRITEDI', 'LBRITEI', 'LCALLIG', 'LeelaUIb', 'LEELAWAD', 'LEELAWDB', 'LeelawUI', 'LeelUIsl',
+        'LFAX', 'LFAXD', 'LFAXDI', 'LFAXI', 'LHANDW', 'LSANS', 'LSANSD', 'LSANSDI', 'LSANSI', 'LTYPE', 'LTYPEB', 'LTYPEBO', 'LTYPEO', 'lucon', 
+        'l_10646', 'MAGNETOB', 'MAIAN', 'malgun', 'malgunbd', 'malgunsl', 'MATURASC', 'micross', 'mingliub', 'MISTRAL', 'mmrtext', 'mmrtextb', 
+        'MOD20', 'modern', 'monbaiti', 'msgothic', 'msjh', 'msjhbd', 'msjhl', 'MSUIGHUB', 'MSUIGHUR', 'msyh', 'msyhbd', 'msyhl', 'msyi', 'MTCORSVA',
+        'MTEXTRA', 'mvboli', 'NIAGENG', 'NIAGSOL', 'Nirmala', 'NirmalaB', 'NirmalaS', 'ntailu', 'ntailub', 'OCRAEXT', 'OLDENGL', 'ONYX', 'OUTLOOK', 
+        'pala', 'palab', 'palabi', 'palai', 'PALSCRI', 'PAPYRUS', 'PARCHM', 'PERBI___', 'PERB____', 'PERI____', 'PERTIBD', 'PERTILI', 'PER_____',
+        'phagspa', 'phagspab', 'PLAYBILL', 'POORICH', 'PRISTINA', 'RAGE', 'RAVIE', 'REFSAN', 'REFSPCL', 'ROCCB___', 'ROCC____', 'ROCK', 'ROCKB', 
+        'ROCKBI', 'ROCKEB', 'ROCKI', 'roman', 'SCHLBKB', 'SCHLBKBI', 'SCHLBKI', 'script', 'SCRIPTBL', 'segmdl2', 'segoepr', 'segoeprb', 'segoesc', 
+        'segoescb', 'segoeui', 'segoeuib', 'segoeuii', 'segoeuil', 'segoeuisl', 'segoeuiz', 'seguibl', 'seguibli', 'seguiemj', 'seguihis', 'seguili',
+        'seguisb', 'seguisbi', 'seguisli', 'seguisym', 'serifer', 'seriffr', 'SHOWG', 'simsun', 'simsunb', 'Sitka', 'SitkaB', 'SitkaI', 'SitkaZ',
+        'smaller', 'SNAP____', 'sserifer', 'STENCIL', 'sylfaen', 'symbol', 'tahoma', 'tahomabd', 'taile', 'taileb', 'TCBI____', 'TCB_____',
+        'TCCB____', 'TCCEB', 'TCCM____', 'TCMI____', 'TCM_____', 'TEMPSITC', 'times', 'timesbd', 'timesbi', 'timesi', 'trebuc', 'trebucbd', 
+        'trebucbi', 'trebucit', 'verdana', 'verdanab', 'verdanai', 'verdanaz', 'vga866', 'vgafixr', 'vgasysr', 'VINERITC', 'VIVALDII', 'VLADIMIR',
+        'webdings', 'wingding', 'WINGDNG2', 'WINGDNG3', 'YuGothB', 'YuGothL', 'YuGothM', 'YuGothR'
+
           ].sort());
           (async() => {
             await document.fonts.ready;
