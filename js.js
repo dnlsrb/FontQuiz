@@ -1,5 +1,7 @@
+ 
+ 
 
-function fontCheck(){
+function input(){
     console.log('font checking started');
      
         const fontCheck = new Set([
@@ -42,8 +44,11 @@ function fontCheck(){
                 addFont.push(font);
                
             }
-            getThreeFont(addFont);
+            getThreeFont(addFont)
           })();
+
+ 
+    
     console.log('font checking end');
     }
       
@@ -92,22 +97,62 @@ function isNumberExist(number, font){
 function getQuizFont(Selected, Font){
     let genNumber = Math.floor(Math.random() * 3);
     changeFont(text,Font[Selected[genNumber]]);
+    changeWord()
+ 
 }
 
+function changeWord(){
+    
+        
+const wordCheck = [
+    // Windows 10
+    "world", "technology", "advances", "every", "innovation", "become", 
+    "driving", "force", "behind", "many", "industries", "rise", "artificial", 
+    "intelligence", "explosion", "smart", "devices", "people", "constantly", 
+    "finding", "ways", "improve", "global", "economy", "depend", "shifts", 
+    "digital", "transformation", "system", "development", "better", "future", 
+    "sustainability", "climate", "change", "significant", "impact", "healthcare", 
+    "education", "communication", "research", "engineering", "continue", "challenge", 
+    "imagination", "opportunities", "endless", "society", "evolving", "quickly", 
+    "need", "adapt", "efforts", "focus", "collaboration", "creativity", 
+    "achieve", "long-term", "success", "technology", "shaping", "modern", 
+    "lives", "influence", "future", "decisions", "ensuring", "innovation", 
+    "leads", "positive", "change", "fields", "automation", "robotics", 
+    "biotechnology", "artificial", "intelligence", "sustainable", "solutions", 
+    "energy", "resources", "preservation", "planet", "climate", "change", 
+    "crucial", "progress", "global", "goals", "generation", "emerging", 
+    "technologies", "revolutionize", "industries", "transform", "everyday", 
+    "life", "enhancing", "efficiency", "solutions", "optimize", "processes", 
+    "ensuring", "innovation", "positively", "impacts", "society"
+
+      ];
+
+    let gen = genNumber(105);
+      
+    text.innerHTML = wordCheck[gen];
+    text.title = wordCheck[gen];
+    
+}
+function genNumber(quantity){
+   const genNumber =  Math.floor(Math.random() * quantity);
+return genNumber;
+}
 function changeFont(element, font, changeText) {
-    element.style.fontFamily = font;
+ 
     if(changeText == true){ 
-    element.innerHTML = font;
+    element.innerHTML = font.toLowerCase() ;
     element.name = font;
     element.title = font;
     }else{
         console.log('eh');
         hiddenValue.setAttribute('value', font);
+        element.style.fontFamily = font;
+      
     }
 }
 
 function gameStart(){
-fontCheck();
+input();
 }
 
 
@@ -119,15 +164,16 @@ function isRight(buttonId){
      
     let buttonValue = document.getElementById(buttonId).innerText;
     console.log(buttonValue + " " + hiddenValue.value)
-    if(buttonValue == hiddenValue.value){
+    if(buttonValue.toUpperCase() == hiddenValue.value.toUpperCase()){
         let Add = parseInt(score.innerHTML) + 1;
         score.innerHTML = Add;
     }else{
         let Minus = parseInt(score.innerHTML)- 1;
         score.innerHTML = Minus;
-    }
+        
+    } 
     showCorrect(buttonId)
-    Restart();
+     Restart();
  
 }
 
@@ -135,15 +181,15 @@ function isRight(buttonId){
 function testText(){
     let changeText = document.getElementById("inputText").value;
     if(changeText == ""){
-        text.innerHTML = "Aa";
+        text.innerHTML = text.title;
     } else { 
     text.innerHTML = changeText;
     }
 }
 
 function resetText(){
-    text.innerHTML = "Aa";
-    inputText.value = "";
+    text.innerHTML = inputText.value;
+ 
 }
 async function Restart(){
     for (let i = 0; i < 2; i++) {
