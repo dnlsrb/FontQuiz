@@ -83,27 +83,19 @@ function getThreeFont(font){
     offloader();
 }
 
- 
+ let LoadMes = '';
  
 
-async function LoadMessage(loaderMes){
-    for (let i = 0; i < 2; i++) {
-        console.log(`Waiting ${i} seconds...`);
-        await sleep(i * 2000);
-       
-    } 
+ function LoadMessage(){
+  
+    loaderMessage.src =  LoadMes;
  
-    loaderMessage.innerHTML = loaderMes;
-
-    return this;
 }
 
   function loader(){
     let loader = document.getElementById("loader");
     loader.style.visibility = 'visible';
-    
-  
- 
+     
  
 }
 async function offloader(){
@@ -190,7 +182,7 @@ function changeFont(element, font, changeText) {
 
 function gameStart(){
 loader();
- 
+LoadMessage();
 input();
 }
 
@@ -206,10 +198,11 @@ function isRight(buttonId){
     if(buttonValue.toUpperCase() == hiddenValue.value.toUpperCase()){
         let Add = parseInt(score.innerHTML) + 1;
         score.innerHTML = Add;
+        LoadMes = 'gif/happy-cat-cat.gif';
     }else{
         let Minus = parseInt(score.innerHTML)- 1;
         score.innerHTML = Minus;
-        
+        LoadMes = 'gif/sad-cat-cat.gif';;
     } 
     showCorrect(buttonId)
      Restart();
